@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.qlkh.model.HangTrongKho">
+		<field name="MaKho" type="String" />
+		<field name="MaHang" type="String" />
+		<field name="SoLuong" type="long" />
+	</model>
+	<model name="com.qlkh.model.KhoHang">
+		<field name="MaKho" type="String" />
+		<field name="TenKho" type="String" />
+		<field name="DiaDiem" type="String" />
+	</model>
+	<model name="com.qlkh.model.MatHang">
+		<field name="MaHang" type="String" />
+		<field name="TenHang" type="String" />
+		<field name="GiaThanh" type="String" />
+	</model>
+</model-hints>

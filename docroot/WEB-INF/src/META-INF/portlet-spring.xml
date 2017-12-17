@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.qlkh.service.HangTrongKhoLocalService" class="com.qlkh.service.impl.HangTrongKhoLocalServiceImpl" />
+	<bean id="com.qlkh.service.HangTrongKhoService" class="com.qlkh.service.impl.HangTrongKhoServiceImpl" />
+	<bean id="com.qlkh.service.persistence.HangTrongKhoPersistence" class="com.qlkh.service.persistence.HangTrongKhoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.qlkh.service.KhoHangLocalService" class="com.qlkh.service.impl.KhoHangLocalServiceImpl" />
+	<bean id="com.qlkh.service.KhoHangService" class="com.qlkh.service.impl.KhoHangServiceImpl" />
+	<bean id="com.qlkh.service.persistence.KhoHangPersistence" class="com.qlkh.service.persistence.KhoHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.qlkh.service.MatHangLocalService" class="com.qlkh.service.impl.MatHangLocalServiceImpl" />
+	<bean id="com.qlkh.service.MatHangService" class="com.qlkh.service.impl.MatHangServiceImpl" />
+	<bean id="com.qlkh.service.persistence.MatHangPersistence" class="com.qlkh.service.persistence.MatHangPersistenceImpl" parent="basePersistence" />
+</beans>

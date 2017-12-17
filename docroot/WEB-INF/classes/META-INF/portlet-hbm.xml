@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.qlkh.model.HangTrongKho" />
+	<import class="com.qlkh.model.KhoHang" />
+	<import class="com.qlkh.model.MatHang" />
+	<class name="com.qlkh.model.impl.HangTrongKhoImpl" table="QLKH_HangTrongKho">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.qlkh.service.persistence.HangTrongKhoPK">
+			<key-property name="MaKho" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="MaHang" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+		<property name="SoLuong" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.qlkh.model.impl.KhoHangImpl" table="QLKH_KhoHang">
+		<cache usage="read-write" />
+		<id name="MaKho" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="TenKho" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DiaDiem" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.qlkh.model.impl.MatHangImpl" table="QLKH_MatHang">
+		<cache usage="read-write" />
+		<id name="MaHang" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="TenHang" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="GiaThanh" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

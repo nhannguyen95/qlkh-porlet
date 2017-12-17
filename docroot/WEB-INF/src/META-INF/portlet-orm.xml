@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.qlkh.model.impl.HangTrongKhoModelImpl">
+		<id-class class="com.qlkh.service.persistence.HangTrongKhoPK" />
+		<attributes>
+			<id name="MaKho" />
+			<id name="MaHang" />
+			<basic name="SoLuong" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.qlkh.model.impl.KhoHangModelImpl">
+		<attributes>
+			<id name="MaKho" />
+			<basic name="TenKho" />
+			<basic name="DiaDiem" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.qlkh.model.impl.MatHangModelImpl">
+		<attributes>
+			<id name="MaHang" />
+			<basic name="TenHang" />
+			<basic name="GiaThanh" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.qlkh.model.impl.HangTrongKhoImpl" name="HangTrongKho">
+		<table name="QLKH_HangTrongKho" />
+		<attributes />
+	</entity>
+	<entity class="com.qlkh.model.impl.KhoHangImpl" name="KhoHang">
+		<table name="QLKH_KhoHang" />
+		<attributes />
+	</entity>
+	<entity class="com.qlkh.model.impl.MatHangImpl" name="MatHang">
+		<table name="QLKH_MatHang" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>quan-ly-kho-hang</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>VIEW</action-key>
+				<action-key>QUANLY_KHOHANG</action-key>
+                <action-key>VIEW_MATHANGS</action-key>
+                <action-key>CRUD_MATHANG</action-key>
+			</supports>
+			<community-defaults/>
+			<guest-defaults/>
+			<guest-unsupported> 
+				<action-key>VIEW</action-key>
+				<action-key>QUANLY_KHOHANG</action-key>
+                <action-key>VIEW_MATHANGS</action-key>
+                <action-key>CRUD_MATHANG</action-key>
+			</guest-unsupported>
+		</permissions>
+	</portlet-resource>
+</resource-action-mapping>
